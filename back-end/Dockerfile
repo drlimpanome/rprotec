@@ -38,6 +38,9 @@ EXPOSE 3001
 
 ENV PORT 3001
 
+# Criar arquivo .env se não existir (para desenvolvimento)
+RUN if [ ! -f .env ]; then cp env.example .env; fi
+
 # Usar ts-node para rodar TypeScript diretamente
 CMD ["npx", "ts-node", "src/app.ts"]
 

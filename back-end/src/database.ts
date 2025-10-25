@@ -1,10 +1,14 @@
 import { Sequelize } from "sequelize";
 const databaseConfig = require("./config/database");
 
-type Environment = "development";
+type Environment = "development" | "production";
 const environment = (process.env.NODE_ENV || "development") as Environment;
 
 const config = databaseConfig[environment];
+
+if (!config) {
+  throw new Error(`Database configuration not found for environment: ${environment}`);
+}
 
 export const sequelize = new Sequelize(
   config.database,
@@ -12,7 +16,14 @@ export const sequelize = new Sequelize(
   config.password,
   {
     host: config.host,
+    port: config.port,
     dialect: config.dialect,
-    logging: console.log,
+    logging: process.env.NODE_ENV === 'development' ? console.log : false,
+    pool: {
+      max: 5,
+      min: 0,
+      acquire: 30000,
+      idle: 10000
+    }
   }
 );
