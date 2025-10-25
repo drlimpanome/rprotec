@@ -1,0 +1,183 @@
+/* Remove if fonts are not used */
+@import '~@fontsource/inter/100.css';
+@import '~@fontsource/inter/200.css';
+@import '~@fontsource/inter/300.css';
+@import '~@fontsource/inter/400.css';
+@import '~@fontsource/inter/500.css';
+@import '~@fontsource/inter/600.css';
+@import '~@fontsource/inter/700.css';
+@import '~@fontsource/inter/800.css';
+@import '~@fontsource/inter/900.css';
+@import '~@fontsource/roboto-mono/300.css';
+@import '~@fontsource/roboto-mono/400.css';
+@import '~@fontsource/plus-jakarta-sans/600.css';
+@import '~@fontsource/plus-jakarta-sans/700.css';
+
+/* Variables */
+:root {
+  --icon-fontSize-sm: 1rem;
+  --icon-fontSize-md: 1.25rem;
+  --icon-fontSize-lg: 1.5rem;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--mui-palette-primary-main);
+}
+
+html {
+  height: 100%;
+}
+
+/* Corporate Color Variables */
+:root {
+  /* Cor em hexadecimal */
+  --color-primary: #1a0b44;
+  --color-secondary: #003677;
+  --color-tertiary: #0060a0;
+  --color-accent-1: #008bbb;
+  --color-accent-2: #00b7c5;
+  --color-accent-3: #00e1c2;
+  
+  /* RGB para uso em rgba */
+  --color-primary-rgb: 26, 11, 68;
+  --color-secondary-rgb: 0, 54, 119;
+  --color-tertiary-rgb: 0, 96, 160;
+  --color-accent-1-rgb: 0, 139, 187;
+  --color-accent-2-rgb: 0, 183, 197;
+  --color-accent-3-rgb: 0, 225, 194;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #1a0b44 0%, #003677 50%, #0060a0 100%);
+  --gradient-primary-horizontal: linear-gradient(90deg, #1a0b44 0%, #003677 100%);
+  --gradient-primary-vertical: linear-gradient(180deg, #1a0b44 0%, #003677 100%);
+  --gradient-accent: linear-gradient(135deg, #008bbb 0%, #00b7c5 50%, #00e1c2 100%);
+  --gradient-accent-horizontal: linear-gradient(90deg, #008bbb 0%, #00b7c5 50%, #00e1c2 100%);
+  --gradient-subtle: linear-gradient(135deg, rgba(26, 11, 68, 0.1) 0%, rgba(0, 54, 119, 0.1) 100%);
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.2);
+  --shadow-glow: 0 0 20px rgba(0, 183, 197, 0.3);
+  --shadow-glow-accent-3: 0 0 20px rgba(0, 225, 194, 0.5);
+}
+
+/* Glassmorphism Effect */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.glassmorphism-dark {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Smooth Transitions */
+* {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Button Hover Effects */
+button, a, [role="button"] {
+  transition: all 0.3s ease;
+}
+
+button:hover, a:hover, [role="button"]:hover {
+  transform: translateY(-2px);
+}
+
+/* Glow Effects */
+.glow-primary {
+  box-shadow: 0 0 20px rgba(26, 11, 68, 0.4);
+}
+
+.glow-accent {
+  box-shadow: 0 0 20px rgba(0, 183, 197, 0.4);
+}
+
+.glow-accent-3 {
+  box-shadow: 0 0 20px rgba(0, 225, 194, 0.4);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(0, 225, 194, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 225, 194, 0.8);
+  }
+}
+
+/* Animation Classes */
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.5s ease-out;
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.5s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-glow {
+  animation: glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+body {
+  height: 100%;
+}

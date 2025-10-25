@@ -1,0 +1,12 @@
+:root {
+  --corporate-primary: #1A0B44;
+  --corporate-secondary: #003677;
+  --corporate-tertiary: #0060A0;
+  --corporate-accent-1: #008BBB;
+  --corporate-accent-2: #00B7C5;
+  --corporate-accent-3: #00E1C2;
+  --corporate-gradient-primary: linear-gradient(135deg, #1a0b44 0%, #003677 50%, #0060a0 100%);
+  --corporate-gradient-accent: linear-gradient(135deg, #008bbb 0%, #00b7c5 50%, #00e1c2 100%);
+  --main-bg: #F8F9FA;
+}
+

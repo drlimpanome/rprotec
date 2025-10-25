@@ -1,0 +1,43 @@
+export interface ProcessPrazos {
+  id: number;
+  uf?: string;
+  numero_diario?: string;
+  data_disponibilizacao?: Date;
+  data_publicacao?: Date;
+  numero_processo?: string;
+  client_id?: number;
+  cod_numyy?: string;
+  natureza?: string;
+  data_administrational_mesure?: Date;
+  classification?: string;
+  interpretation?: string;
+  administrational_mesure?: string;
+  legal_prazo?: string;
+  prazo?: string;
+  is_classified?: number;
+  id_coluna?: number;
+  hora?: string;
+  publicacao?: string;
+  user_id?: number;
+  providencia_judicial?: string;
+  prazo_judicial?: Date;
+  providencia_auxiliar?: string;
+  prazo_auxiliar?: Date;
+  providencia_administrativa?: string;
+  grupo?: string;
+  process?: {
+    advogado_cliente: string;
+    area_atuacao: string;
+    parte_cliente: string;
+    status: string;
+  };
+  justificativa?: string;
+  risco?: string;
+  parecer?: string;
+  prazo_administrativo?: Date;
+  cumprimento_prazo?: string;
+  parte_cliente?: string;
+  advogado_cliente?: string;
+  area_atuacao?: string;
+  status?: string;
+}

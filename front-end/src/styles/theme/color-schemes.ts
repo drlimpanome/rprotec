@@ -1,0 +1,141 @@
+import type { ColorSystemOptions } from '@mui/material/styles';
+
+import { california, kepple, neonBlue, nevada, redOrange, shakespeare, stormGrey, corporatePrimary, corporateSecondary, corporateTertiary, corporateAccent1, corporateAccent2, corporateAccent3 } from './colors';
+import type { ColorScheme } from './types';
+
+export const colorSchemes = {
+  dark: {
+    palette: {
+      action: { disabledBackground: 'rgba(0, 0, 0, 0.12)' },
+      background: {
+        default: 'var(--mui-palette-neutral-950)',
+        defaultChannel: '9 10 11',
+        paper: '#1a1a2e',
+        paperChannel: '26 26 46',
+        level1: 'var(--mui-palette-neutral-800)',
+        level2: 'var(--mui-palette-neutral-700)',
+        level3: 'var(--mui-palette-neutral-600)',
+      },
+      common: { black: '#000000', white: '#ffffff' },
+      divider: 'var(--mui-palette-neutral-700)',
+      dividerChannel: '50 56 62',
+      error: {
+        ...redOrange,
+        light: redOrange[300],
+        main: redOrange[400],
+        dark: redOrange[500],
+        contrastText: 'var(--mui-palette-common-black)',
+      },
+      info: {
+        ...corporateAccent1,
+        light: corporateAccent1[300],
+        main: corporateAccent1[400],
+        dark: corporateAccent1[500],
+        contrastText: 'var(--mui-palette-common-white)',
+      },
+      neutral: { ...nevada },
+      primary: {
+        ...corporatePrimary,
+        light: corporatePrimary[300],
+        main: corporatePrimary[950],
+        dark: corporatePrimary[800],
+        contrastText: 'var(--mui-palette-common-white)',
+      },
+      secondary: {
+        ...corporateSecondary,
+        light: corporateSecondary[300],
+        main: corporateSecondary[950],
+        dark: corporateSecondary[800],
+        contrastText: 'var(--mui-palette-common-white)',
+      },
+      success: {
+        ...corporateAccent3,
+        light: corporateAccent3[300],
+        main: corporateAccent3[400],
+        dark: corporateAccent3[500],
+        contrastText: 'var(--mui-palette-common-black)',
+      },
+      text: {
+        primary: 'var(--mui-palette-neutral-100)',
+        primaryChannel: '240 244 248',
+        secondary: 'var(--mui-palette-neutral-400)',
+        secondaryChannel: '159 166 173',
+        disabled: 'var(--mui-palette-neutral-600)',
+      },
+      warning: {
+        ...california,
+        light: california[300],
+        main: california[400],
+        dark: california[500],
+        contrastText: 'var(--mui-palette-common-black)',
+      },
+    },
+  },
+  light: {
+    palette: {
+      action: { disabledBackground: 'rgba(0, 0, 0, 0.06)' },
+      background: {
+        default: '#fafbfc',
+        defaultChannel: '250 251 252',
+        paper: 'var(--mui-palette-common-white)',
+        paperChannel: '255 255 255',
+        level1: 'var(--mui-palette-neutral-50)',
+        level2: 'var(--mui-palette-neutral-100)',
+        level3: 'var(--mui-palette-neutral-200)',
+      },
+      common: { black: '#000000', white: '#ffffff' },
+      divider: 'var(--mui-palette-neutral-200)',
+      dividerChannel: '220 223 228',
+      error: {
+        ...redOrange,
+        light: redOrange[400],
+        main: redOrange[500],
+        dark: redOrange[600],
+        contrastText: 'var(--mui-palette-common-white)',
+      },
+      info: {
+        ...corporateAccent1,
+        light: corporateAccent1[400],
+        main: corporateAccent1[500],
+        dark: corporateAccent1[600],
+        contrastText: 'var(--mui-palette-common-white)',
+      },
+      neutral: { ...stormGrey },
+      primary: {
+        ...corporatePrimary,
+        light: corporatePrimary[400],
+        main: corporatePrimary[950],
+        dark: corporatePrimary[800],
+        contrastText: 'var(--mui-palette-common-white)',
+      },
+      secondary: {
+        ...corporateSecondary,
+        light: corporateSecondary[400],
+        main: corporateSecondary[950],
+        dark: corporateSecondary[700],
+        contrastText: 'var(--mui-palette-common-white)',
+      },
+      success: {
+        ...corporateAccent3,
+        light: corporateAccent3[400],
+        main: corporateAccent3[500],
+        dark: corporateAccent3[600],
+        contrastText: 'var(--mui-palette-common-white)',
+      },
+      text: {
+        primary: 'var(--mui-palette-neutral-900)',
+        primaryChannel: '33 38 54',
+        secondary: 'var(--mui-palette-neutral-500)',
+        secondaryChannel: '102 112 133',
+        disabled: 'var(--mui-palette-neutral-400)',
+      },
+      warning: {
+        ...california,
+        light: california[400],
+        main: california[500],
+        dark: california[600],
+        contrastText: 'var(--mui-palette-common-white)',
+      },
+    },
+  },
+} satisfies Partial<Record<ColorScheme, ColorSystemOptions>>;

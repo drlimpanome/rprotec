@@ -1,0 +1,77 @@
+export const phoneNumberMask = [
+  '(',
+  /[1-9]/,
+  /\d/,
+  ')',
+  ' ',
+  /\d/,
+  /\d/,
+  /\d/,
+  /\d/,
+  /\d/,
+  '-',
+  /\d/,
+  /\d/,
+  /\d/,
+  /\d/,
+];
+export const timeMask = [/[1-9]/, /[1-9]/, ':', /[1-9]/, /[1-9]/];
+
+export const processnumber = [
+  /\d/,
+  /\d/,
+  /\d/,
+  /\d/,
+  /\d/,
+  /\d/,
+  /\d/,
+  '-',
+  /\d/,
+  /\d/,
+  '.',
+  /\d/,
+  /\d/,
+  /\d/,
+  /\d/,
+  '.',
+  /\d/,
+  '.',
+  /\d/,
+  /\d/,
+  '.',
+  /\d/,
+  /\d/,
+  /\d/,
+  /\d/,
+];
+
+export const cpfNumberMask = [/[0-9]/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '-', /\d/, /\d/];
+
+export const cnpjNumberMask = [
+  /\d/,
+  /\d/,
+  '.',
+  /\d/,
+  /\d/,
+  /\d/,
+  '.',
+  /\d/,
+  /\d/,
+  /\d/,
+  '/',
+  /\d/,
+  /\d/,
+  /\d/,
+  /\d/,
+  '-',
+  /\d/,
+  /\d/,
+];
+
+export const masks = {
+  cnpj: cnpjNumberMask,
+  cpf: cpfNumberMask,
+  phone: phoneNumberMask,
+  process: processnumber,
+  time: timeMask,
+};

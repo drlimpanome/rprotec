@@ -1,0 +1,22 @@
+export const paths = {
+  home: '/home',
+  auth: { signIn: '/auth/sign-in', signUp: '/auth/sign-up', resetPassword: '/auth/reset-password' },
+  dashboard: {
+    overview: '/dashboard',
+    account: '/dashboard/account',
+    customers: '/dashboard/customers',
+    integrations: '/dashboard/integrations',
+    settings: '/dashboard/settings',
+    settingsServices: '/dashboard/settings/services',
+    Consult: '/dashboard/logistic/visualize',
+    ConsultNew: '/dashboard/logistic/create',
+    Process: '/dashboard/process/list',
+    ProcessNew: '/dashboard/process/create',
+    prazos: '/dashboard/prazos/admin',
+    prazosCalendar: '/dashboard/prazos/calendar',
+    services: '/dashboard/services',
+    servicesList: '/dashboard/services/list',
+    relatorio: '/dashboard/relatorio',
+  },
+  errors: { notFound: '/errors/not-found' },
+} as const;
